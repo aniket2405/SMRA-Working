@@ -122,6 +122,7 @@ contract Auction {
             bidToCheck.blindedBid ==
                 keccak256(abi.encodePacked(value, msg.sender))
         );
+        uint256 random;
         for (uint256 i = 0; i < length; i++) {
             Bid storage roundBid = bids[msg.sender][i];
             totalBidValue += roundBid.deposit;
